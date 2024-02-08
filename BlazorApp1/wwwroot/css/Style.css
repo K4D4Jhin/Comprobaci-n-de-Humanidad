@@ -1,0 +1,25 @@
+﻿.input-nombre {
+    border: 2px solid #ff0000; /* Borde rojo */
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.saludo {
+    color: #ff0000; /* Texto rojo */
+    font-size: 18px;
+}
+
+.btn-comprobacion {
+    background-color: #ff0000; /* Fondo rojo */
+    color: #000000; /* Texto negro */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-comprobacion:hover {
+    background-color: #990000; /* Color rojo más oscuro al pasar el cursor */
+}
+}

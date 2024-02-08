@@ -1,0 +1,28 @@
+﻿@page "/Humanidad"
+<h3>Escribe Tu Nombre</h3>
+<input type="text" @bind="Nombre" @oninput="ComprobarNombre" />
+@if (MostrarSaludo)
+{
+    <p>@Saludo</p>
+}
+<button @onclick="Saludar" disabled="@MostrarSaludo">Comprobación de Humanidad</button>
+
+@code {
+    string Nombre { get; set; }
+    string Saludo { get; set; }
+    bool MostrarSaludo { get; set; }
+
+    void Saludar()
+    {
+        Saludo = $"{Nombre}, Saludos, Me alegro informarle que usted no es un robot.";
+        MostrarSaludo = true;
+    }
+
+    void ComprobarNombre()
+    {
+        if (!string.IsNullOrWhiteSpace(Nombre))
+        {
+            Saludar();
+        }
+    }
+}
